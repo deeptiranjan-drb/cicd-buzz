@@ -4,5 +4,5 @@ if [ "$TRAVIS_BRANCH" = "main" ]; then
 else
     TAG="$TRAVIS_BRANCH"
 fi
-docker build -f Dockerfile -t deeptiranjandrb:$TAG .
-docker push deeptiranjandrb:$TAG
+docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TAG .
+docker push $TRAVIS_REPO_SLUG:$TAG
